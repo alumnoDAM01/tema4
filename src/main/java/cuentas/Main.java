@@ -35,6 +35,6 @@ public class Main {
             System.out.print("Fallo al ingresar");
         }
         
-        System.out.println("hola, esto es una prueba");
+        System.out.println("hola, esto es un nuevo commit");
     }
 }
