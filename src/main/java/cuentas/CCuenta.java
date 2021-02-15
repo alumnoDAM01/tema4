@@ -67,16 +67,24 @@ public class CCuenta {
         this.tipoInterés = tipoInterés;
     }
 
-
+       /**
+     * aqui se definen los atributos de la clase
+     */
     private String nombre;
     private String cuenta;
     private double saldo;
     private double tipoInterés;
 
+    /**
+     * constructor vacio
+     */
     public CCuenta()
     {
     }
 
+    /**
+     * constructor con parametros
+     */
     public CCuenta(String nom, String cue, double sal, double tipo)
     {
         nombre =nom;
@@ -86,9 +94,13 @@ public class CCuenta {
 
     public double estado()
     {
+        
         return getSaldo();
     }
 
+    /**
+     * función ingresar la cual contiene excepciones para controlar que no se introduzcan cantidades negativas.
+     */
     public void ingresar(double cantidad) throws Exception
     {
         if (cantidad<0)
@@ -96,6 +108,11 @@ public class CCuenta {
         setSaldo(getSaldo() + cantidad);
     }
 
+    /**
+     * @param cantidad es un tipo double el cual permite indicar la cantidad a retirar en este caso.
+     * los if junto con las excepciones se encargar de controlar que no se retiren cantidades negativas ni superiores al saldo de la cuenta.
+     * las excepciones se encargan de controlar las posibles excepciones.
+     */
     public void retirar(double cantidad) throws Exception
     {
         if (cantidad <= 0)
